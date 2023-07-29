@@ -1,0 +1,12 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+    padding: 2px 15px;
+    border: 2px solid rgb(236, 236, 236);
+}
+
+i {
+    font-size: 25px;
+    margin: auto 0;
+}
