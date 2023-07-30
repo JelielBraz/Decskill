@@ -9,5 +9,7 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./nav.component.css']
 })
 export class NavComponent {
-
+  clearLocalStorage() {
+    localStorage.clear();
+  }
 }
