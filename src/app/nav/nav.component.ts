@@ -11,5 +11,6 @@ import { CommonModule } from '@angular/common';
 export class NavComponent {
   clearLocalStorage() {
     localStorage.clear();
+    window.location.reload();
   }
 }

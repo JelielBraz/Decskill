@@ -1,0 +1,23 @@
+<div class="row">
+    <div class="col-1">
+        <img src="{{getImagePath()}}" class="profile-picture" alt="">
+    </div>
+    <div class="col-11">
+        <div class="row" >
+            <b class="col-1">{{ tweet.user.name }}</b>
+            <p class="col-5 info"> {{tweet.user.at}} - TODO </p>
+            <div class="col-5"></div>
+            
+            <i class="bi bi-trash col-1" style="color: red;"></i>
+        </div>
+        {{ tweet.text}}
+
+        <div class="row action-buttons">
+            <i class="bi bi-chat col-2"></i>
+            <i class="bi bi-arrow-repeat col-2"></i>
+            <i class="bi bi-heart col-2"></i>
+            <i class="bi bi-arrow-up-square col-2"></i>
+            <i class="bi bi-bar-chart col-2"></i>
+        </div>
+    </div>
+</div>
