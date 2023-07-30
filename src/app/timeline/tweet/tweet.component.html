@@ -8,7 +8,7 @@
             <p class="col-5 info"> {{tweet.user.at}} - TODO </p>
             <div class="col-5"></div>
             
-            <i class="bi bi-trash col-1" style="color: red;"></i>
+            <i class="bi bi-trash col-1" style="color: red;" (click)="openDeleteModalTweet()"></i>
         </div>
         {{ tweet.text}}
 

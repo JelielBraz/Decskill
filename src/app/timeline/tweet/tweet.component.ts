@@ -1,5 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule, Location } from '@angular/common';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { DeleteTweetModalComponent } from './delete-tweet-modal/delete-tweet-modal.component';
 
 @Component({
   selector: 'app-tweet',
@@ -13,15 +15,18 @@ export class TweetComponent {
   @Input() tweet: any;
   assetsPath : string = '';
 
-  constructor(private location: Location){}
-  
+  constructor(private location: Location, private modalService: NgbModal){}
+
+  openDeleteModalTweet() {
+    const a = this.modalService.open(DeleteTweetModalComponent);
+    a.componentInstance.id = this.tweet.id;
+
+  }
 
   ngOnInit() {
-    debugger;
     this.assetsPath = this.location.path();
   }
   getImagePath() {
-    console.log(this.tweet);
-    return this.assetsPath + '/images/' + this.tweet.picturePath;
+    return this.assetsPath + '/assets/images/' + this.tweet.picturePath;
   }
 }
