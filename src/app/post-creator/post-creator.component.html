@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="row post-creator">
+        <div class="col-1">
+            <img class="profile-picture" src="./../../assets/images/man-avatar.png" alt="Profile picture">
+        </div>
+        <div class="col-11">
+            <textarea maxlength="130" type="text" (focus)="showPublicAdvice=true" (blur)="showPublicAdvice=false" [(ngModel)]="tweetMessage" (ngModelChange)="onInputChange()" placeholder="O que está acontecendo?" class="form-control">
+            </textarea>
+            <div class="text-primary divider" [class.hidden-content]="!showPublicAdvice">
+                <i class="bi bi-globe"></i> Qualquer pessoa pode responder
+            </div>
+            <div class="row">
+                <div class="col-5 text-primary icons-create-post">
+                    <div class="row">
+                        <i class="bi bi-files col-2"></i>
+                        <i class="bi bi-filetype-gif col-2"></i>
+                        <i class="bi bi-bar-chart col-2"></i>
+                        <i class="bi bi-emoji-smile col-2"></i>
+                        <i class="bi bi-calendar-event col-2"></i>
+                    </div>
+                </div>
+                <div class="col-4"></div>
+                <button [disabled]="isTwisTweetDisabled" (click)="tweet()" type="button" class="btn btn-primary rounded-pill px-3 col-3">
+                    Tweetar
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
