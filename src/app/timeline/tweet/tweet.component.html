@@ -5,7 +5,7 @@
     <div class="col-11">
         <div class="row" >
             <b class="col-1">{{ tweet.user.name }}</b>
-            <p class="col-5 info"> {{tweet.user.at}} - TODO </p>
+            <p class="col-5 info"> {{tweet.user.at}} - {{ tweetTime }} </p>
             <div class="col-5"></div>
             
             <i class="bi bi-trash col-1" style="color: red;" (click)="openDeleteModalTweet()"></i>
